@@ -145,9 +145,16 @@
     <div class="content">
       <div class="main-content">
         <div class="today"><h1>Today</h1></div>
+
         <div class="add-task">
-          <button class="add-task-btn">+</button> Add Task
+          
+       
+          
         </div>
+        
+        
+
+        
       </div>
     </div>
 
@@ -160,28 +167,31 @@
       
 
       
-      <form class="task-form">
-        <label for="task-title">Task Title:</label> </br>
-        <input id="task-title" type="text" class="input-title" > </br>
-
-        <label for="task-priority">Priority:</label></br>
-       <select id="task-priority">
-        <option value="select">Select Priority</option>
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-       </select> <br>
-       
-        <label for="schedule">Schedule:</label> <br>
-        <input id="schedule" type="date"> <br>
-
-      </form>
+      <form id="task-form" class="task-form">
+        <label for="task-title">Task Title:</label><br>
+        <input name="task-title" type="text" class="input-title"><br>
+    
+        <label for="task-priority">Priority:</label><br>
+        <select name="task-priority">
+            <option value="select">Select Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br>
+    
+        <label for="schedule">Schedule:</label><br>
+        <input name="schedule" type="date"><br>
+    
+        <label for="notes">Notes:</label><br>
+        <textarea name="notes" form="task-form">Enter text here...</textarea><br>
+    
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    
       <br>
 
       
-      <textarea name="comment" form="task-form">Enter text here...</textarea>
-      <button form="task-form" type="submit" class="submit-btn">Add</button>
-   
+      
 
       <div class="add-close-box"></div>
     </dialog>

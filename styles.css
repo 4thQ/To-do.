@@ -149,18 +149,27 @@ body {
 }
 
 .add-task {
+  margin-top: 10px;
   background-color: rgb(39, 60, 222);
   height: 40px;
-  width: 80%;
-  padding-left: 40px;
-  padding-top: 10px;
+  width: 90%;
+  margin-left: 40px;
+}
+li {
+  list-style: circle;
+  display: flex;
+  flex-direction: row;
+}
+
+.task-delete {
+  margin-left: auto;
 }
 
 /* add task dialog */
 .dialog {
   margin-top: 200px;
   padding: 0;
-  height: 422px;
+  height: 445px;
   width: 500px;
 }
 
@@ -200,13 +209,15 @@ h2 {
   height: 35px;
 }
 
+.task-form > label {
+  font-size: 15px;
+}
+
 .input-title {
   width: 450px;
 }
 
 textarea {
-  margin-left: 20px;
-  margin-right: 20px;
   height: 80px;
   width: 90%;
 }
@@ -222,5 +233,5 @@ select {
   width: 60px;
   height: 25px;
   border-radius: 8px;
-  margin-left: 220px;
+  margin-left: 190px;
 }
