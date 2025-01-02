@@ -7,6 +7,8 @@ const submitBtn = document.querySelector(".submit-btn");
 const taskForm = document.querySelector(".task-form");
 const addTask = document.querySelector(".add-task");
 const h3 = document.querySelector("h3");
+const mainContent = document.querySelector(".main-content");
+const ntd = document.querySelector(".ntd");
 
 addTaskBtns.forEach((button) => {
   button.addEventListener("click", () => {
@@ -21,6 +23,7 @@ closeBtn.addEventListener("click", () => {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
+  ntd.style.display = "none";
   let form = new FormData(taskForm);
 
   let taskTitle = form.get("task-title");
@@ -29,24 +32,24 @@ submitBtn.addEventListener("click", (e) => {
   let notes = form.get("notes");
 
   const li = document.createElement("li");
+  li.classList.add("add-task");
   li.innerHTML = taskTitle;
   addTask.appendChild(li);
-  li.addEventListener("click", (e) => {
-    li.style.textDecoration == "line-through"
-      ? (li.style.textDecoration = "")
-      : (li.style.textDecoration = "line-through");
-  });
 
   const taskDelete = document.createElement("button");
 
   taskDelete.classList.add("task-delete");
   taskDelete.innerText = "delete";
+
   taskDelete.addEventListener("click", (e) => {
-    console.log("hey");
     taskDelete.closest("li").remove();
+    if (addTask.hasChildNodes()) {
+      ntd.style.display = "none";
+    } else {
+      ntd.style.display = "";
+    }
   });
 
   li.appendChild(taskDelete);
-
   dialog.close();
 });

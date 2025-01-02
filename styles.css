@@ -1,5 +1,6 @@
 :root {
   --b: 2px solid black;
+  --hoverColor: rgba(0, 0, 0, 0.08);
 }
 * {
   box-sizing: border-box;
@@ -10,7 +11,7 @@ body {
 }
 
 .nav {
-  background-color: aqua;
+  background-color: var(--primaryBackgroundColor);
   width: 300px;
   height: 100vh;
 }
@@ -21,14 +22,15 @@ body {
   height: 8%;
   display: flex;
   padding: 5px;
+  margin-bottom: 10px;
 }
 
 .profile-picture {
   border: var(--b);
-  width: 20%;
+  width: 18.5%;
   height: 100%;
   border-radius: 60%;
-  background-color: yellow;
+
   background-image: url(/images/me.jpg);
   background-size: contain;
 }
@@ -38,7 +40,8 @@ body {
   display: flex;
   padding-left: 5px;
   align-items: center;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .notification-icon {
@@ -66,6 +69,7 @@ body {
   height: 45%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 .nav-bar button {
   height: 100%;
@@ -76,9 +80,10 @@ body {
   gap: 12px;
   padding-left: 40px;
   border: none;
+  background-color: var(--primaryBackgroundColor);
 }
 .nav-bar button:hover {
-  background-color: rgb(226, 159, 183);
+  background-color: var(--hoverColor);
 }
 
 /* ----------------- */
@@ -87,7 +92,11 @@ body {
 .project-bar {
   border: var(--b);
   width: 100%;
-  height: 45%;
+  height: 44.4%;
+}
+
+.my-project {
+  margin: 6px;
 }
 
 .project-content {
@@ -96,6 +105,7 @@ body {
   display: flex;
   gap: 160px;
   padding-left: 10px;
+  margin: 6px;
 }
 
 .add-project-btn {
@@ -105,10 +115,11 @@ body {
   align-items: center;
   border: none;
   background-color: transparent;
+  font-weight: bold;
 }
 
 .add-project-btn:hover {
-  border: var(--b);
+  background-color: var(--hoverColor);
 }
 
 .delete-btn {
@@ -117,7 +128,7 @@ body {
 }
 
 .delete-btn:hover {
-  border: var(--b);
+  transform: scale(1.3);
 }
 
 .add-project {
@@ -125,12 +136,13 @@ body {
   border: var(--b);
   display: flex;
   align-items: center;
+  margin: 6px;
 }
 
 /* ----------- */
 
 .content {
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 80vw;
   height: 100vh;
   display: flex;
@@ -139,22 +151,14 @@ body {
 }
 
 .main-content {
-  background-color: rgb(17, 185, 76);
+  border: var(--b);
   width: 90%;
   height: 90%;
 }
 
 .today {
-  background-color: tomato;
 }
 
-.add-task {
-  margin-top: 10px;
-  background-color: rgb(39, 60, 222);
-  height: 40px;
-  width: 90%;
-  margin-left: 40px;
-}
 li {
   list-style: circle;
   display: flex;
@@ -234,4 +238,15 @@ select {
   height: 25px;
   border-radius: 8px;
   margin-left: 190px;
+}
+
+.ntd {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.add-task {
+  margin: 6px;
+  margin-top: 10px;
 }
