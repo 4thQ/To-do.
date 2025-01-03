@@ -145,11 +145,10 @@
     <div class="content">
       <div class="main-content">
         <div class="today"><h1>Today</h1></div>
-
         <h7 class="ntd">Nothing to do......</h7>
         <div class="add-task"></div>
         
-          
+         
       </div>
     </div>
 
@@ -164,31 +163,65 @@
       
       <form id="task-form" class="task-form">
         <label for="task-title">Task Title:</label><br>
-        <input name="task-title" type="text" class="input-title"><br>
+        <input name="task-title" type="text" class="input-title" required><br>
     
         <label for="task-priority">Priority:</label><br>
-        <select name="task-priority">
+        <select name="task-priority" required>
             <option value="select">Select Priority</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
         </select><br>
     
         <label for="schedule">Schedule:</label><br>
-        <input name="schedule" type="date"><br>
+        <input name="schedule" type="date" required><br>
     
         <label for="notes">Notes:</label><br>
         <textarea name="notes" form="task-form">Enter text here...</textarea><br>
     
         <button type="submit" class="submit-btn">Submit</button>
     </form>
-    
+
       <br>
-
-      
-      
-
       <div class="add-close-box"></div>
     </dialog>
+
+
+
+
+
+
+    <dialog class="dialog2">
+      <div class="dialog-title-box">
+        <h2>Edit </h1>
+        <button class="close-btn2"> <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button> 
+      </div>
+      
+      <form id="edit-form" class="edit-form">
+        <label for="task-title">New Title:</label><br>
+        <input name="task-title" type="text" class="input-title edit-title" required ><br>
+    
+        <label for="task-priority">Priority:</label><br>
+        <select name="task-priority" class="task-priority">
+            <option value="select">Select Priority </option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select><br>
+    
+        <label for="schedule">New Schedule:</label><br>
+        <input name="schedule" type="date" class="schedule-input"><br>
+    
+        <label for="notes">Notes:</label><br>
+        <textarea name="notes" form="edit-form" class="notes-input"></textarea><br>
+    
+        <button type="submit" class="save-btn">Save</button>
+    </form>
+      <br>
+      <div class="add-close-box"></div>
+    </dialog>
+
+
+
   </body>
 </html>
